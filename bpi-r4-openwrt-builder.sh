@@ -27,20 +27,20 @@ rm -rf mtk-openwrt-feeds/24.10/patches-feeds/108-strongswan-add-uci-support.patc
 cd openwrt
 bash ../mtk-openwrt-feeds/autobuild/unified/autobuild.sh filogic-mac80211-mt7988_rfb-mt7996 prepare
 
-\cp -r ../my_files/sms-tool/ feeds/packages/utils/sms-tool
-\cp -r ../my_files/modemdata-main/ feeds/packages/utils/modemdata 
-\cp -r ../my_files/luci-app-modemdata-main/luci-app-modemdata/ feeds/luci/applications
+# \cp -r ../my_files/sms-tool/ feeds/packages/utils/sms-tool
+# \cp -r ../my_files/modemdata-main/ feeds/packages/utils/modemdata 
+# \cp -r ../my_files/luci-app-modemdata-main/luci-app-modemdata/ feeds/luci/applications
 \cp -r ../my_files/luci-app-lite-watchdog/ feeds/luci/applications
-\cp -r ../my_files/luci-app-sms-tool-js-main/luci-app-sms-tool-js/ feeds/luci/applications
+#\cp -r ../my_files/luci-app-sms-tool-js-main/luci-app-sms-tool-js/ feeds/luci/applications
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-\cp -r ../my_files/qmi.sh package/network/utils/uqmi/files/lib/netifd/proto/
-chmod -R 755 package/network/utils/uqmi/files/lib/netifd/proto
-chmod -R 755 feeds/luci/applications/luci-app-modemdata/root
-chmod -R 755 feeds/luci/applications/luci-app-sms-tool-js/root
-chmod -R 755 feeds/packages/utils/modemdata/files/usr/share
+#\cp -r ../my_files/qmi.sh package/network/utils/uqmi/files/lib/netifd/proto/
+#chmod -R 755 package/network/utils/uqmi/files/lib/netifd/proto
+#chmod -R 755 feeds/luci/applications/luci-app-modemdata/root
+#chmod -R 755 feeds/luci/applications/luci-app-sms-tool-js/root
+#chmod -R 755 feeds/packages/utils/modemdata/files/usr/share
 
 #cd openwrt
 \cp -r ../my_files/my_final_defconfig .config
